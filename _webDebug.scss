@@ -1,0 +1,61 @@
+$debugColumns:false; //if true, all the column's background will be coloured
+$debugManualColors:true; //if true, .debug* clases are generated base on a background color gradient
+
+//$debug variable must be set at the parent SCSS file
+@if $debug==true
+{
+    $debugBgColor:pink; //base color for debuging (change at will)
+
+    //column's background colors generation
+    @if $debugColumns==true
+    {
+        //color gradient for columns
+        $debugBackgroundXs:lightgray;
+        $debugBackgroundSm:orange;
+        $debugBackgroundMd:lightgreen;
+        $debugBackgroundLg:lightblue;
+
+        //generar degradado de fondos para columnas xs
+        $i: 1;
+        @while $i <= 12 {
+            .col-xs-#{$i} { background-color:darken($debugBackgroundXs,percentage($i*2/100)); }
+            $i: $i+1;
+        }
+
+        //generar degradado de fondos para columnas sm
+        $i: 1;
+        @while $i <= 12 {
+            .col-sm-#{$i} { background-color:darken($debugBackgroundSm,percentage($i*2/100)); }
+            $i: $i+1;
+        }
+
+        //generar degradado de fondos para columnas md
+        $i: 1;
+        @while $i <= 12 {
+            .col-md-#{$i} { background-color:darken($debugBackgroundMd,percentage($i*3/100)); }
+            $i: $i+1;
+        }
+
+        //generar degradado de fondos para columnas lg
+        $i: 1;
+        @while $i <= 12 {
+            .col-lg-#{$i} { background-color:darken($debugBackgroundLg,percentage($i*3/100)); }
+            $i: $i+1;
+        }
+    }
+
+    //background colors generation for manual debug
+    @if $debugManualColors==true
+    {
+        //colors for manual debug
+        $debugBgColor1:$debugBgColor;
+
+        $i:1;
+        $p:0;
+         @while $p <= 75{
+            .debug#{$i} {background-color:darken($debugBgColor,percentage($p/100))}
+            $i:$i+1;
+            $p:$p+5;
+        }
+    }
+}
