@@ -1,5 +1,5 @@
 $debugColumns:false; //if true, all the column's background will be coloured
-$debugManualColors:true; //if true, .debug* clases are generated base on a background color gradient
+$debugManualColors:true; //if true, .debug* clases are generated based on a background color gradient
 
 //$debug variable must be set at the parent SCSS file
 @if $debug==true

@@ -1,0 +1,21 @@
+{
+  "name": "@aheadlabs/sass-debug-helper",
+  "version": "1.0.0",
+  "description": "Generates a CSS from SCSS files that let you color your html boxes for layout debuging purposes.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aheadlabs/sass-debug-helper.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "debug",
+    "helper"
+  ],
+  "author": "Iván Sainz",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/aheadlabs/sass-debug-helper/issues"
+  },
+  "homepage": "https://github.com/aheadlabs/sass-debug-helper#readme"
+}
